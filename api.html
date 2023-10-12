@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Documentation &mdash; sensirion_i2c_sen68 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Build documentation" href="build-documentation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> sensirion_i2c_sen68
+          </a>
+              <div class="version">
+                0.1.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sen68">SEN68</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sen68.device">Sen68Device</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sen68.commands">Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-sensirion_i2c_sen68.result_types">Result Types</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sensirion_i2c_sen68</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>API Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-documentation">
+<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline"></a></h1>
+<section id="sen68">
+<h2>SEN68<a class="headerlink" href="#sen68" title="Permalink to this headline"></a></h2>
+<section id="module-sensirion_i2c_sen68.device">
+<span id="sen68device"></span><h3>Sen68Device<a class="headerlink" href="#module-sensirion_i2c_sen68.device" title="Permalink to this headline"></a></h3>
+<p>The class Sen68DeviceBase implements the low level interface of the sensor.
+The class Sen68Device extends the Sen68DeviceBase. It provides additional functions to ease the use of the
+sensor.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68DeviceBase">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.device.</span></span><span class="sig-name descname"><span class="pre">Sen68DeviceBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68DeviceBase"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68DeviceBase" title="Permalink to this definition"></a></dt>
+<dd><p>Low level API implementation of SEN68</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68DeviceBase.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68DeviceBase.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68DeviceBase.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68DeviceBase.channel">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">channel</span></span><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68DeviceBase.channel" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68DeviceBase.device_reset">
+<span class="sig-name descname"><span class="pre">device_reset</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68DeviceBase.device_reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68DeviceBase.device_reset" title="Permalink to this definition"></a></dt>
+<dd><p>Executes a reset on the device. This has the same effect as a power cycle.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68DeviceBase.start_continuous_measurement">
+<span class="sig-name descname"><span class="pre">start_continuous_measurement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68DeviceBase.start_continuous_measurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68DeviceBase.start_continuous_measurement" title="Permalink to this definition"></a></dt>
+<dd><p>Starts a continuous measurement.
+After power up, wait at least 500 ms before sending this
+command. After sending this command, wait at least 1100 ms before
+reading measurements.
+This command is only available in idle mode. If the device is already
+in any measure mode, this command has no effect.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68DeviceBase.stop_measurement">
+<span class="sig-name descname"><span class="pre">stop_measurement</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68DeviceBase.stop_measurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68DeviceBase.stop_measurement" title="Permalink to this definition"></a></dt>
+<dd><p>Stops the measurement and returns to idle mode. After sending this
+command, wait at least 1000 ms before starting a new measurement.
+If the device is already in idle mode, this command has no effect.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68DeviceBase.get_data_ready">
+<span class="sig-name descname"><span class="pre">get_data_ready</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68DeviceBase.get_data_ready"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68DeviceBase.get_data_ready" title="Permalink to this definition"></a></dt>
+<dd><p>This command can be used to check if new measurement results are ready to read. The data ready flag
+is automatically reset after reading the measurement values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return padding</dt>
+<dd class="field-odd"><p>Padding byte, always 0x00.</p>
+</dd>
+<dt class="field-even">Return data_ready</dt>
+<dd class="field-even"><p>True (0x01) if data is ready, False (0x00) if not. When no measurement is running, False will be
+returned.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68DeviceBase.read_measured_values_as_integers">
+<span class="sig-name descname"><span class="pre">read_measured_values_as_integers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68DeviceBase.read_measured_values_as_integers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68DeviceBase.read_measured_values_as_integers" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the measured values.
+The command 0x0202 “Get Data Ready” can be used to check if new
+data is available since the last read operation. If no new data is
+available, the previous values will be returned again. If no data
+is available at all (e.g. measurement not running for at least one
+second), all values will be at their upper limit (0xFFFF for <cite>uint16</cite>,
+0x7FFF for <cite>int16</cite>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return mass_concentration_pm1p0</dt>
+<dd class="field-odd"><p>Value is scaled with factor 10: PM1.0 [µg/m³] = value / 10
+<em>Note: If this value is unknown, 0xFFFF is returned.</em></p>
+</dd>
+<dt class="field-even">Return mass_concentration_pm2p5</dt>
+<dd class="field-even"><p>Value is scaled with factor 10: PM2.5 [µg/m³] = value / 10
+<em>Note: If this value is unknown, 0xFFFF is returned.</em></p>
+</dd>
+<dt class="field-odd">Return mass_concentration_pm4p0</dt>
+<dd class="field-odd"><p>Value is scaled with factor 10: PM4.0 [µg/m³] = value / 10
+<em>Note: If this value is unknown, 0xFFFF is returned.</em></p>
+</dd>
+<dt class="field-even">Return mass_concentration_pm10p0</dt>
+<dd class="field-even"><p>Value is scaled with factor 10: PM10.0 [µg/m³] = value / 10
+<em>Note: If this value is unknown, 0xFFFF is returned.</em></p>
+</dd>
+<dt class="field-odd">Return ambient_humidity</dt>
+<dd class="field-odd"><p>Value is scaled with factor 100: RH [%] = value / 100
+<em>Note: If this value is unknown, 0x7FFF is returned.</em></p>
+</dd>
+<dt class="field-even">Return ambient_temperature</dt>
+<dd class="field-even"><p>Value is scaled with factor 200: T [°C] = value / 200
+<em>Note: If this value is unknown, 0x7FFF is returned.</em></p>
+</dd>
+<dt class="field-odd">Return voc_index</dt>
+<dd class="field-odd"><p>Value is scaled with factor 10: VOC Index = value / 10
+<em>Note: If this value is unknown, 0x7FFF is returned.</em></p>
+</dd>
+<dt class="field-even">Return nox_index</dt>
+<dd class="field-even"><p>Value is scaled with factor 10: NOx Index = value / 10
+<em>Note: If this value is unknown, 0x7FFF is returned. During
+the first 10..11 seconds after power-on or device reset, this
+value will be 0x7FFF as well.</em></p>
+</dd>
+<dt class="field-odd">Return hcho</dt>
+<dd class="field-odd"><p>Value is scaled with a factor of 5: HCHO [ppm] = value / 5
+<em>Note: If this value is unknown, 0xFFFF is returned. During the
+first 5..6 seconds after power-on or device reset, this value
+will be 0xFFFF as well.</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68DeviceBase.get_product_name">
+<span class="sig-name descname"><span class="pre">get_product_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68DeviceBase.get_product_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68DeviceBase.get_product_name" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the product name from the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return product_name</dt>
+<dd class="field-odd"><p>Null-terminated ASCII string containing the product name. Up to 32 characters can be read from the
+device.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68DeviceBase.get_serial_number">
+<span class="sig-name descname"><span class="pre">get_serial_number</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68DeviceBase.get_serial_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68DeviceBase.get_serial_number" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the serial number from the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return serial_number</dt>
+<dd class="field-odd"><p>Null-terminated ASCII string containing the serial number. Up to 32 characters can be read from the
+device.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68DeviceBase.get_version">
+<span class="sig-name descname"><span class="pre">get_version</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68DeviceBase.get_version"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68DeviceBase.get_version" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the version information for the hardware, firmware and communication protocol.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return firmware_major</dt>
+<dd class="field-odd"><p>Firmware major version number.</p>
+</dd>
+<dt class="field-even">Return firmware_minor</dt>
+<dd class="field-even"><p>Firmware minor version number.</p>
+</dd>
+<dt class="field-odd">Return firmware_debug</dt>
+<dd class="field-odd"><p>Firmware debug state. If the debug state is set, the firmware is in development.</p>
+</dd>
+<dt class="field-even">Return hardware_major</dt>
+<dd class="field-even"><p>Hardware major version number.</p>
+</dd>
+<dt class="field-odd">Return hardware_minor</dt>
+<dd class="field-odd"><p>Hardware minor version number.</p>
+</dd>
+<dt class="field-even">Return protocol_major</dt>
+<dd class="field-even"><p>Protocol major version number.</p>
+</dd>
+<dt class="field-odd">Return protocol_minor</dt>
+<dd class="field-odd"><p>Protocol minor version number.</p>
+</dd>
+<dt class="field-even">Return padding</dt>
+<dd class="field-even"><p>Padding byte, ignore this.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68Device">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.device.</span></span><span class="sig-name descname"><span class="pre">Sen68Device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68Device"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68Device" title="Permalink to this definition"></a></dt>
+<dd><p>Driver class implementation of SEN68</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68Device.sen68">
+<span class="sig-name descname"><span class="pre">sen68</span></span><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68Device.sen68" title="Permalink to this definition"></a></dt>
+<dd><p>Access to base class</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68Device.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68Device.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68Device.__init__" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.device.Sen68Device.read_measured_values">
+<span class="sig-name descname"><span class="pre">read_measured_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68Device.read_measured_values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68Device.read_measured_values" title="Permalink to this definition"></a></dt>
+<dd><p>Read measured values and apply scaling as defined in datasheet.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return a_mass_concentration_pm1p0</dt>
+<dd class="field-odd"><p>Mass concentration for particles smaller than 1.0 um</p>
+</dd>
+<dt class="field-even">Return a_mass_concentration_pm2p5</dt>
+<dd class="field-even"><p>Mass concentration for particles smaller than 2.5 um</p>
+</dd>
+<dt class="field-odd">Return a_mass_concentration_pm4p0</dt>
+<dd class="field-odd"><p>Mass concentration for particles smaller than 4.0 um</p>
+</dd>
+<dt class="field-even">Return a_mass_concentration_pm10p0</dt>
+<dd class="field-even"><p>Mass concentration for particles smaller than 10.0 um</p>
+</dd>
+<dt class="field-odd">Return a_temperature</dt>
+<dd class="field-odd"><p>Measured temperature in degrees celsius. The raw value is scaled appropriately.</p>
+</dd>
+<dt class="field-even">Return a_humidity</dt>
+<dd class="field-even"><p>Measured humidity in %RH. The raw value is scaled appropriately.</p>
+</dd>
+<dt class="field-odd">Return a_voc_index</dt>
+<dd class="field-odd"><p>Measured VOC Index ticks.</p>
+</dd>
+<dt class="field-even">Return a_nox_index</dt>
+<dd class="field-even"><p>Measured NOx Index ticks.</p>
+</dd>
+<dt class="field-odd">Return a_hcho</dt>
+<dd class="field-odd"><p>Measured formaldehyde concentration in ppm.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-sensirion_i2c_sen68.commands">
+<span id="commands"></span><h3>Commands<a class="headerlink" href="#module-sensirion_i2c_sen68.commands" title="Permalink to this headline"></a></h3>
+<p>The transfer classes specify the data that is transferred between host and sensor. The generated transfer classes
+are used by the driver class and not intended for direct use.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.DeviceReset">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.commands.</span></span><span class="sig-name descname"><span class="pre">DeviceReset</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#DeviceReset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.DeviceReset" title="Permalink to this definition"></a></dt>
+<dd><p>Executes a reset on the device. This has the same effect as a power cycle.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.DeviceReset.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">54020</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.DeviceReset.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.DeviceReset.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#DeviceReset.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.DeviceReset.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.DeviceReset.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.DeviceReset.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.StartContinuousMeasurement">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.commands.</span></span><span class="sig-name descname"><span class="pre">StartContinuousMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#StartContinuousMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.StartContinuousMeasurement" title="Permalink to this definition"></a></dt>
+<dd><p>Starts a continuous measurement.
+After power up, wait at least 500 ms before sending this
+command. After sending this command, wait at least 1100 ms before
+reading measurements.
+This command is only available in idle mode. If the device is already
+in any measure mode, this command has no effect.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.StartContinuousMeasurement.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">33</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.StartContinuousMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.StartContinuousMeasurement.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#StartContinuousMeasurement.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.StartContinuousMeasurement.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.StartContinuousMeasurement.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.StartContinuousMeasurement.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.StopMeasurement">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.commands.</span></span><span class="sig-name descname"><span class="pre">StopMeasurement</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#StopMeasurement"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.StopMeasurement" title="Permalink to this definition"></a></dt>
+<dd><p>Stops the measurement and returns to idle mode. After sending this
+command, wait at least 1000 ms before starting a new measurement.
+If the device is already in idle mode, this command has no effect.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.StopMeasurement.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">260</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.StopMeasurement.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.StopMeasurement.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#StopMeasurement.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.StopMeasurement.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.StopMeasurement.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.StopMeasurement.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetDataReady">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.commands.</span></span><span class="sig-name descname"><span class="pre">GetDataReady</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#GetDataReady"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetDataReady" title="Permalink to this definition"></a></dt>
+<dd><p>This command can be used to check if new measurement results are ready to read. The data ready flag
+is automatically reset after reading the measurement values.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetDataReady.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">514</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetDataReady.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetDataReady.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#GetDataReady.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetDataReady.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetDataReady.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetDataReady.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetDataReady.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetDataReady.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.ReadMeasuredValuesAsIntegers">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.commands.</span></span><span class="sig-name descname"><span class="pre">ReadMeasuredValuesAsIntegers</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#ReadMeasuredValuesAsIntegers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.ReadMeasuredValuesAsIntegers" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the measured values.
+The command 0x0202 “Get Data Ready” can be used to check if new
+data is available since the last read operation. If no new data is
+available, the previous values will be returned again. If no data
+is available at all (e.g. measurement not running for at least one
+second), all values will be at their upper limit (0xFFFF for <cite>uint16</cite>,
+0x7FFF for <cite>int16</cite>).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.ReadMeasuredValuesAsIntegers.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">768</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.ReadMeasuredValuesAsIntegers.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.ReadMeasuredValuesAsIntegers.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#ReadMeasuredValuesAsIntegers.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.ReadMeasuredValuesAsIntegers.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.ReadMeasuredValuesAsIntegers.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.ReadMeasuredValuesAsIntegers.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.ReadMeasuredValuesAsIntegers.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.ReadMeasuredValuesAsIntegers.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetProductName">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.commands.</span></span><span class="sig-name descname"><span class="pre">GetProductName</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#GetProductName"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetProductName" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the product name from the device.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetProductName.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">53268</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetProductName.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetProductName.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#GetProductName.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetProductName.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetProductName.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetProductName.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetProductName.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetProductName.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetSerialNumber">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.commands.</span></span><span class="sig-name descname"><span class="pre">GetSerialNumber</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#GetSerialNumber"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetSerialNumber" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the serial number from the device.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetSerialNumber.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">53299</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetSerialNumber.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetSerialNumber.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#GetSerialNumber.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetSerialNumber.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetSerialNumber.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetSerialNumber.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetSerialNumber.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetSerialNumber.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetVersion">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.commands.</span></span><span class="sig-name descname"><span class="pre">GetVersion</span></span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#GetVersion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetVersion" title="Permalink to this definition"></a></dt>
+<dd><p>Gets the version information for the hardware, firmware and communication protocol.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetVersion.CMD_ID">
+<span class="sig-name descname"><span class="pre">CMD_ID</span></span><em class="property"> <span class="pre">=</span> <span class="pre">53248</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetVersion.CMD_ID" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetVersion.pack">
+<span class="sig-name descname"><span class="pre">pack</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/commands.html#GetVersion.pack"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetVersion.pack" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetVersion.tx">
+<span class="sig-name descname"><span class="pre">tx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.TxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetVersion.tx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.commands.GetVersion.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><em class="property"> <span class="pre">=</span> <span class="pre">&lt;sensirion_driver_adapters.rx_tx_data.RxData</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#sensirion_i2c_sen68.commands.GetVersion.rx" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-sensirion_i2c_sen68.result_types">
+<span id="result-types"></span><h3>Result Types<a class="headerlink" href="#module-sensirion_i2c_sen68.result_types" title="Permalink to this headline"></a></h3>
+<p>The signal classes specify transformations of the raw sensor signals into a meaningful units.
+The generated signal types are used by the driver class and not intended for direct use.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalMassConcentrationPm1p0">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalMassConcentrationPm1p0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass_concentration_pm1p0_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/result_types.html#SignalMassConcentrationPm1p0"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalMassConcentrationPm1p0" title="Permalink to this definition"></a></dt>
+<dd><p>Mass concentration for particles smaller than 1.0 um</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalMassConcentrationPm1p0.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalMassConcentrationPm1p0.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalMassConcentrationPm2p5">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalMassConcentrationPm2p5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass_concentration_pm2p5_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/result_types.html#SignalMassConcentrationPm2p5"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalMassConcentrationPm2p5" title="Permalink to this definition"></a></dt>
+<dd><p>Mass concentration for particles smaller than 2.5 um</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalMassConcentrationPm2p5.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalMassConcentrationPm2p5.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalMassConcentrationPm4p0">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalMassConcentrationPm4p0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass_concentration_pm4p0_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/result_types.html#SignalMassConcentrationPm4p0"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalMassConcentrationPm4p0" title="Permalink to this definition"></a></dt>
+<dd><p>Mass concentration for particles smaller than 4.0 um</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalMassConcentrationPm4p0.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalMassConcentrationPm4p0.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalMassConcentrationPm10p0">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalMassConcentrationPm10p0</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mass_concentration_pm10p0_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/result_types.html#SignalMassConcentrationPm10p0"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalMassConcentrationPm10p0" title="Permalink to this definition"></a></dt>
+<dd><p>Mass concentration for particles smaller than 10.0 um</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalMassConcentrationPm10p0.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalMassConcentrationPm10p0.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalTemperature">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalTemperature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">temperature_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/result_types.html#SignalTemperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalTemperature" title="Permalink to this definition"></a></dt>
+<dd><p>Measured temperature in degrees celsius. The raw value is scaled appropriately.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalTemperature.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalTemperature.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalHumidity">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalHumidity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">humidity_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/result_types.html#SignalHumidity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalHumidity" title="Permalink to this definition"></a></dt>
+<dd><p>Measured humidity in %RH. The raw value is scaled appropriately.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalHumidity.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalHumidity.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalVocIndex">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalVocIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voc_index_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/result_types.html#SignalVocIndex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalVocIndex" title="Permalink to this definition"></a></dt>
+<dd><p>Measured VOC Index ticks.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalVocIndex.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalVocIndex.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalNoxIndex">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalNoxIndex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nox_index_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/result_types.html#SignalNoxIndex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalNoxIndex" title="Permalink to this definition"></a></dt>
+<dd><p>Measured NOx Index ticks.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalNoxIndex.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalNoxIndex.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalHcho">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalHcho</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hcho_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/result_types.html#SignalHcho"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalHcho" title="Permalink to this definition"></a></dt>
+<dd><p>Measured formaldehyde concentration in ppm.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalHcho.value">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalHcho.value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="build-documentation.html" class="btn btn-neutral float-left" title="Build documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023 Sensirion AG, Switzerland.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
