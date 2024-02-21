@@ -276,32 +276,32 @@ device.</p>
 <span class="sig-name descname"><span class="pre">read_measured_values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/device.html#Sen68Device.read_measured_values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.device.Sen68Device.read_measured_values" title="Permalink to this definition"></a></dt>
 <dd><p>Read measured values and apply scaling as defined in datasheet.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return a_mass_concentration_pm1p0</dt>
-<dd class="field-odd"><p>Mass concentration for particles smaller than 1.0 um</p>
+<dt class="field-odd">Return mass_concentration_pm1p0</dt>
+<dd class="field-odd"><p>Mass concentration for particles smaller than 1.0 um.</p>
 </dd>
-<dt class="field-even">Return a_mass_concentration_pm2p5</dt>
-<dd class="field-even"><p>Mass concentration for particles smaller than 2.5 um</p>
+<dt class="field-even">Return mass_concentration_pm2p5</dt>
+<dd class="field-even"><p>Mass concentration for particles smaller than 2.5 um.</p>
 </dd>
-<dt class="field-odd">Return a_mass_concentration_pm4p0</dt>
-<dd class="field-odd"><p>Mass concentration for particles smaller than 4.0 um</p>
+<dt class="field-odd">Return mass_concentration_pm4p0</dt>
+<dd class="field-odd"><p>Mass concentration for particles smaller than 4.0 um.</p>
 </dd>
-<dt class="field-even">Return a_mass_concentration_pm10p0</dt>
-<dd class="field-even"><p>Mass concentration for particles smaller than 10.0 um</p>
+<dt class="field-even">Return mass_concentration_pm10p0</dt>
+<dd class="field-even"><p>Mass concentration for particles smaller than 10.0 um.</p>
 </dd>
-<dt class="field-odd">Return a_temperature</dt>
-<dd class="field-odd"><p>Measured temperature in degrees celsius. The raw value is scaled appropriately.</p>
+<dt class="field-odd">Return humidity</dt>
+<dd class="field-odd"><p>Measured humidity in %RH.</p>
 </dd>
-<dt class="field-even">Return a_humidity</dt>
-<dd class="field-even"><p>Measured humidity in %RH. The raw value is scaled appropriately.</p>
+<dt class="field-even">Return temperature</dt>
+<dd class="field-even"><p>Measured temperature in degrees celsius.</p>
 </dd>
-<dt class="field-odd">Return a_voc_index</dt>
-<dd class="field-odd"><p>Measured VOC Index ticks.</p>
+<dt class="field-odd">Return voc_index</dt>
+<dd class="field-odd"><p>Measured VOC Index between 0 and 500.</p>
 </dd>
-<dt class="field-even">Return a_nox_index</dt>
-<dd class="field-even"><p>Measured NOx Index ticks.</p>
+<dt class="field-even">Return nox_index</dt>
+<dd class="field-even"><p>Measured NOx Index between 0 and 500.</p>
 </dd>
-<dt class="field-odd">Return a_hcho</dt>
-<dd class="field-odd"><p>Measured formaldehyde concentration in ppm.</p>
+<dt class="field-odd">Return hcho</dt>
+<dd class="field-odd"><p>Measured formaldehyde concentration in ppb.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -616,7 +616,7 @@ The generated signal types are used by the driver class and not intended for dir
 <dl class="py class">
 <dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalHcho">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">sensirion_i2c_sen68.result_types.</span></span><span class="sig-name descname"><span class="pre">SignalHcho</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hcho_raw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensirion_i2c_sen68/result_types.html#SignalHcho"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalHcho" title="Permalink to this definition"></a></dt>
-<dd><p>Measured formaldehyde concentration in ppm.</p>
+<dd><p>Measured formaldehyde concentration in ppb.</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="sensirion_i2c_sen68.result_types.SignalHcho.value">
 <em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#sensirion_i2c_sen68.result_types.SignalHcho.value" title="Permalink to this definition"></a></dt>
@@ -638,7 +638,7 @@ The generated signal types are used by the driver class and not intended for dir
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023 Sensirion AG, Switzerland.</p>
+    <p>&#169; Copyright 2024 Sensirion AG, Switzerland.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
