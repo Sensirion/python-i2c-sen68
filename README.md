@@ -1,5 +1,7 @@
 # Python I2C Driver for Sensirion SEN68
 
+DRIVER MOVED TO GITHUB https://github.com/Sensirion/python-i2c-sen68
+
 This repository contains the Python driver to communicate with a Sensirion SEN68 sensor over I2C. 
 
 <img src="https://raw.githubusercontent.com/Sensirion/python-i2c-sen68/master/images/sen6x.png"
