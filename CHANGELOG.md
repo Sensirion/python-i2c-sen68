@@ -5,13 +5,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased] 
 
-## [0.1.0] - 2024-2-20
-
 ### Added
 
-- Add product picture
-- Add interfaces to start, stop and read measurements.
-- Add interfaces to read product name, serial number and version
+- Support for all I2C commands for the SEN68 as described in the datasheet.
 
-[Unreleased]: https://github.com/Sensirion/python-i2c-sen68/compare/0.1.0...HEAD
-[0.1.0]: https://github.com/Sensirion/python-i2c-sen68/releases/tag/0.1.0
